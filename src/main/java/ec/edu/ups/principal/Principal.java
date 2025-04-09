@@ -38,7 +38,11 @@ public class Principal {
 
                     break;
                 case 3:
-                    //SumaDigitos
+                    System.out.print("------ EJERCICIO [3] - SUMA DIGITOS NUMERO\nNumero: ");
+                    numero = scanner.nextInt();
+                    SumaDigitosNumero sumaDigitosNumero = new SumaDigitosNumero();
+                    resultado = sumaDigitosNumero.sumaDigitosNumero(numero);
+                    System.out.println("Respuesta: "+resultado);
                     break;
                 default:
                     System.out.println("Opcion no valida");
