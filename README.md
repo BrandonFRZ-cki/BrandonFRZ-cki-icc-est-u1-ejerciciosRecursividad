@@ -70,6 +70,7 @@ numero = 2563
 = 16
 ```
 
+
 --- 
 
 ## Enuncuados

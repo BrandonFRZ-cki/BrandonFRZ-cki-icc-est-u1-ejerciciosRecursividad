@@ -1,5 +1,6 @@
 package ec.edu.ups.principal;
 
+import ec.edu.ups.ejercicios.Fibonacci;
 import ec.edu.ups.ejercicios.PotenciaDeNumero;
 import ec.edu.ups.ejercicios.SumaDigitosNumero;
 import ec.edu.ups.ejercicios.SumaEnterosConsecutivos;
@@ -13,7 +14,7 @@ public class Principal {
         int numero = 0;
 
         do{
-            System.out.println("\n-------- MENU DE EJERCICIOS -------\n1. Suma de enteros consecutivos\n2. Potencia de un numero\n3. Suma de dijitos de un numero\n4. Salir");
+            System.out.println("\n-------- MENU DE EJERCICIOS -------\n1. Suma de enteros consecutivos\n2. Potencia de un numero\n3. Suma de dijitos de un numero\n4. Fibonacci\n5. Salir");
             System.out.print  ("-----------------------------------\nOpcion: ");
             opcion = scanner.nextInt();
             int resultado = 0;
@@ -24,7 +25,8 @@ public class Principal {
                     numero = scanner.nextInt();
                     SumaEnterosConsecutivos sumaEnterosConsecutivos = new SumaEnterosConsecutivos();
                     resultado = sumaEnterosConsecutivos.sumaEnterosConsecutivos(numero);
-                    System.out.println(" 0 = "+resultado);
+                    //System.out.println(" 0 = "+resultado);
+                    System.out.println(resultado);
                     break;
                 case 2:
                     System.out.print("------ EJERCICIO [2] - POTENCIA\nBase: ");
@@ -44,12 +46,19 @@ public class Principal {
                     resultado = sumaDigitosNumero.sumaDigitosNumero(numero);
                     System.out.println(resultado);
                     break;
+                case 4:
+                    System.out.print("------ EJERCICIO [4] - FIBONACCI\nNumero: ");
+                    numero = scanner.nextInt();
+                    Fibonacci fibonacci = new Fibonacci();
+                    resultado = fibonacci.fibonacci(numero);
+                    System.out.println(resultado);
+                    break;
                 default:
                     System.out.println("Opcion no valida");
                     break;
             }
 
-        }while(opcion != 4);
+        }while(opcion != 5);
 
 
     }
