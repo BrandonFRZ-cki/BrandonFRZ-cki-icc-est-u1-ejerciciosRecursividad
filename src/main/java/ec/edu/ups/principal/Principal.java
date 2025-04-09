@@ -42,7 +42,7 @@ public class Principal {
                     numero = scanner.nextInt();
                     SumaDigitosNumero sumaDigitosNumero = new SumaDigitosNumero();
                     resultado = sumaDigitosNumero.sumaDigitosNumero(numero);
-                    System.out.println("Respuesta: "+resultado);
+                    System.out.println(resultado);
                     break;
                 default:
                     System.out.println("Opcion no valida");
