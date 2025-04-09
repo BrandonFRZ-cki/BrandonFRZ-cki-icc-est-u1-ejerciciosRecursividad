@@ -1,5 +1,6 @@
 package ec.edu.ups.principal;
 
+import ec.edu.ups.ejercicios.PotenciaDeNumero;
 import ec.edu.ups.ejercicios.SumaDigitosNumero;
 import ec.edu.ups.ejercicios.SumaEnterosConsecutivos;
 
@@ -16,16 +17,25 @@ public class Principal {
             System.out.print  ("-----------------------------------\nOpcion: ");
             opcion = scanner.nextInt();
             int resultado = 0;
-            System.out.print("Numero: ");
-            numero = scanner.nextInt();
+
             switch(opcion){
                 case 1:
+                    System.out.print("------ EJERCICIO [1] - SUMA CONSECUTIVOS\nNumero: ");
+                    numero = scanner.nextInt();
                     SumaEnterosConsecutivos sumaEnterosConsecutivos = new SumaEnterosConsecutivos();
                     resultado = sumaEnterosConsecutivos.sumaEnterosConsecutivos(numero);
-                    System.out.println("Suma consecutivos = "+resultado);
+                    System.out.println(" 0 = "+resultado);
                     break;
                 case 2:
-                    //Potencia
+                    System.out.print("------ EJERCICIO [2] - POTENCIA\nBase: ");
+                    numero = scanner.nextInt();
+                    int exponente = 0;
+                    System.out.print("Exponente: ");
+                    exponente = scanner.nextInt();
+                    PotenciaDeNumero potenciaDeNumero = new PotenciaDeNumero();
+                    resultado = potenciaDeNumero.potenciaDeNumero(numero, exponente);
+                    System.out.println(numero+" ^ "+exponente+" = "+resultado);
+
                     break;
                 case 3:
                     //SumaDigitos
